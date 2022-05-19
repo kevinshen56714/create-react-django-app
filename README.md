@@ -13,14 +13,14 @@ Minimal Django + PostgreSQL + Create React App template
 
 ### Backend
 
-- Poetry (Python dependency management system)
 - Python3 (backend language)
   - Black (formatter)
+  - Psycopg2 (PostgreSQL adapter for Python)
 - Django (backend framework)
   - Django REST Framework (Django's toolkit for building Web APIs)
   - An example app in the `server/exampleApp` folder showing how to setup API models, serializers, and views
 - PostgreSQL (database)
-  - Psycopg (PostgreSQL adapter for Python)
+- Poetry (Python dependency management system)
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ Clone this repository to your local machine:
 git clone https://github.com/kevinshen56714/create-react-django-app.git
 ```
 
-### Client
+### To run the client
 
 In the project folder,
 
@@ -39,11 +39,11 @@ cd client
 yarn && yarn start
 ```
 
-### Server
+### To run the server
 
 #### PostgreSQL
 
-To run the server, you first need to have [PostgreSQL](https://www.postgresql.org/download/) installed and running. You need to create a user and a database, and enter your information in the DATABASES section of `server/main/settings.py`. It may look something like this:
+You first need to have [PostgreSQL](https://www.postgresql.org/download/) installed and running. You need to create a user and a database, and enter your information in the DATABASES section of `server/main/settings.py`. It may look something like this:
 
 ```python
 DATABASES = {
@@ -77,3 +77,5 @@ python manage.py runserver
 ```
 
 Once the server is running, you can go to localhost:8000/customer/, localhost:8000/customer/create to play around with the example API GET and POST requests.
+
+If you add customers at localhost:8000/customer/create, you should see the customer information shown on the frontend at localhost:3000
