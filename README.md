@@ -10,7 +10,7 @@
 - TypeScript (frontend language)
 - React (frontend framework)
   - Create React App (support for TSX, ES6, TypeScript, no need to install bundler, ...etc)
-  - An example fetch() GET request to the server in the `client/src/App.tsx`
+  - An example fetch() GET request to the server in [`client/src/App.tsx`](https://github.com/kevinshen56714/create-react-django-app/blob/bb16565cff0d6d1d41a3d3f487f745b08d0a34f6/client/src/App.tsx#L11)
 
 ### Backend
 
@@ -21,7 +21,7 @@
   - Python-decouple (to get env file content)
 - Django (backend framework)
   - Django REST Framework (Django's toolkit for building Web APIs)
-  - An example app in the `server/exampleApp` folder showing how to setup API models, serializers, and views
+  - An example app in the [`server/exampleApp`](https://github.com/kevinshen56714/create-react-django-app/tree/main/server/exampleApp) folder showing how to setup API models, serializers, and views
 - PostgreSQL (database)
 
 ## Getting Started
