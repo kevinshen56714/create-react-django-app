@@ -1,6 +1,8 @@
 # create-react-django-app
 
-Minimal Django + PostgreSQL + Create React App template
+![Image](https://user-images.githubusercontent.com/11501902/169211080-f0beca5a-ccb9-430a-8609-266e458d5ec0.png)
+(Customers can be added through POST request or with the backend GUI at localhost:8000/customer/create)
+
 
 ## What's included?
 
