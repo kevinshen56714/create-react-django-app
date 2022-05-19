@@ -3,7 +3,6 @@
 ![Image](https://user-images.githubusercontent.com/11501902/169211080-f0beca5a-ccb9-430a-8609-266e458d5ec0.png)
 (Customers can be added through POST request or with the backend GUI at localhost:8000/customer/create)
 
-
 ## What's included?
 
 ### Frontend
@@ -16,13 +15,14 @@
 ### Backend
 
 - Python3 (backend language)
+  - Poetry (Python dependency management system)
   - Black (formatter)
   - Psycopg2 (PostgreSQL adapter for Python)
+  - Python-decouple (to get env file content)
 - Django (backend framework)
   - Django REST Framework (Django's toolkit for building Web APIs)
   - An example app in the `server/exampleApp` folder showing how to setup API models, serializers, and views
 - PostgreSQL (database)
-- Poetry (Python dependency management system)
 
 ## Getting Started
 
@@ -43,27 +43,20 @@ yarn && yarn start
 
 ### To run the server
 
-#### PostgreSQL
+#### Django and PostgreSQL
 
-You first need to have [PostgreSQL](https://www.postgresql.org/download/) installed and running. You need to create a user and a database, and enter your information in the DATABASES section of `server/main/settings.py`. It may look something like this:
+You first need to have [PostgreSQL](https://www.postgresql.org/download/) installed and running, and create a user and a database. Afterwards, create a `.env` file in the project root or server directory to store your database information along with some Django settings. It may look something like this:
 
-```python
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "your-db-name",
-        "USER": "your-user",
-        "PASSWORD": "your-password",
-        "HOST": "localhost",
-        "PORT": "5432",
-        # You can instead use the following OPTIONS if you have the files set up
-        # see more at https://docs.djangoproject.com/en/4.0/ref/databases/#postgresql-notes
-        # "OPTIONS": {
-        #     "service": "my_service",
-        #     "passfile": ".my_pgpass",
-        # },
-    }
-}
+##### `.env` file (at project root or server directory)
+
+```bash
+SECRET_KEY = your-django-secret-key
+DEBUG = True  # set to False in production
+DB_NAME = your-db-name
+DB_USER = your-user-name
+DB_PASSWORD = your-user-password
+DB_HOST = localhost  # set to your domain name in production
+DB_PORT = 5432
 ```
 
 #### Poetry
