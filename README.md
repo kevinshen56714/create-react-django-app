@@ -1,7 +1,7 @@
 # create-react-django-app
 
 ![Image](https://user-images.githubusercontent.com/11501902/169211080-f0beca5a-ccb9-430a-8609-266e458d5ec0.png)
-(Customers can be added through POST request or with the backend GUI at localhost:8000/customer/create)
+>Note: Customers can be added with the backend GUI at localhost:8000/customer/create or through POST request
 
 ## What's included?
 
@@ -29,7 +29,7 @@
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/kevinshen56714/create-react-django-app.git
+$ git clone https://github.com/kevinshen56714/create-react-django-app.git
 ```
 
 ### To run the client
@@ -37,26 +37,26 @@ git clone https://github.com/kevinshen56714/create-react-django-app.git
 In the project folder,
 
 ```bash
-cd client
-yarn && yarn start
+$ cd client
+$ yarn && yarn start
 ```
 
 ### To run the server
 
 #### Django and PostgreSQL
 
-You first need to have [PostgreSQL](https://www.postgresql.org/download/) installed and running, and create a user and a database. Afterwards, create a `.env` file in the project root or server directory to store your database information along with some Django settings. It may look something like this:
+You first need to have [PostgreSQL](https://www.postgresql.org/download/) installed and running, and create a user and a database. Afterwards, create `./server/.env` file to store your database information along with some Django settings. It should have values for all the following keys:
 
-##### `.env` file (at project root or server directory)
+##### `./server/.env` file
 
-```bash
-SECRET_KEY = your-django-secret-key
+```python
+SECRET_KEY = <YOUR_DJANGO_SECRET_KEY>
 DEBUG = True  # set to False in production
-DB_NAME = your-db-name
-DB_USER = your-user-name
-DB_PASSWORD = your-user-password
+DB_NAME = <YOUR_DB_NAME>
+DB_USER = <YOUR_USER_NAME>
+DB_PASSWORD = <YOUR_USER_PASSWORD>
 DB_HOST = localhost  # set to your domain name in production
-DB_PORT = 5432
+DB_PORT = 5432  # default postgreSQL port
 ```
 
 #### Poetry
@@ -64,13 +64,13 @@ DB_PORT = 5432
 In addition to the database, you need to setup the Python environment. We use [poetry](https://python-poetry.org/docs/#installation) for dependency management, so poetry needs to be installed first. Once installed, in the project folder,
 
 ```bash
-poetry shell  # this should create a virtualenv for you at .venv
-poetry install
-cd server
-python manage.py migrate  # make sure your selected Python interpreter is the one in .venv
-python manage.py runserver
+$ poetry shell  # this should create a virtualenv for you at .venv and start using it
+$ poetry install
+$ cd server
+$ python manage.py migrate  # make sure your selected Python interpreter is the one in .venv
+$ python manage.py runserver
 ```
 
-Once the server is running, you can go to localhost:8000/customer/, localhost:8000/customer/create to play around with the example API GET and POST requests.
+> Once the server is running, you can go to localhost:8000/customer/ and localhost:8000/customer/create to play around with the example API GET and POST requests.
 
-If you add customers at localhost:8000/customer/create, you should see the customer information shown on the frontend at localhost:3000
+> If you add customers at localhost:8000/customer/create, you should see the customer information shown on the frontend at localhost:3000
