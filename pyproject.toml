@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "create-react-django-app"
+version = "0.1.0"
+description = "Minimal Django + Create React App template"
+authors = ["kevinshen56714 <kshen64@gatech.edu>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^4.0.4"
+djangorestframework = "^3.13.1"
+django-cors-headers = "^3.12.0"
+psycopg2 = "^2.9.3"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^22.3.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
