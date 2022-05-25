@@ -1,4 +1,4 @@
-# create-react-django-app
+# Kevin's React + Django + PostgreSQL app template
 
 ![Image](https://user-images.githubusercontent.com/11501902/169211080-f0beca5a-ccb9-430a-8609-266e458d5ec0.png)
 >Note: Customers can be added with the backend GUI at localhost:8000/customer/create or through POST request
