@@ -1,7 +1,9 @@
 # Kevin's React + Django + PostgreSQL app template
 
 ![Image](https://user-images.githubusercontent.com/11501902/169211080-f0beca5a-ccb9-430a-8609-266e458d5ec0.png)
->Note: Customers can be added with the backend GUI at localhost:8000/customer/create or through POST request
+
+> **Note**
+> Customers can be added with the backend GUI at localhost:8000/customer/create or through POST request
 
 ## What's included?
 
@@ -70,7 +72,8 @@ $ cd server
 $ python manage.py migrate  # make sure your selected Python interpreter is the one in .venv
 $ python manage.py runserver
 ```
-
+> **Note**
 > Once the server is running, you can go to localhost:8000/customer/ and localhost:8000/customer/create to play around with the example API GET and POST requests.
 
+> **Note**
 > If you add customers at localhost:8000/customer/create, you should see the customer information shown on the frontend at localhost:3000
